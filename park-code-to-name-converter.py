@@ -43,14 +43,31 @@ park_codes = {
     "WM": "Weymouth Bay"
 }
 
-# Get park_code keys from dictionary
-park_keys = park_codes.keys()
+# Variables
+park_keys = park_codes.keys()       # Keys (Park Codes)
+park_values = park_codes.values()   # Values (Park Names)
 
-for key in park_keys:
-    print(key)
 
-# Get park_code values from dictionary
-park_values = park_codes.values()
+# Functions
+def list_keys():
+    for key in park_keys:
+        print(key)
 
-for value in park_values:
-    print(value)
+def list_values():
+    for value in park_values:
+        print(value)
+
+'''
+def search_keys(key):
+    key = park_codes.get(key)
+    return key
+'''
+    
+codes_or_names = input("Would you like a list of Park 'codes' or 'names'?\n")
+
+if codes_or_names == "codes":
+    print(list_keys())
+elif codes_or_names == "names":
+    print(list_values())
+else:
+    print("Incorrect entry, please type 'codes' or 'names'.")
