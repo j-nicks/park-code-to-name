@@ -42,3 +42,15 @@ park_codes = {
     "WD": "Wild Duck",
     "WM": "Weymouth Bay"
 }
+
+# Get park_code keys from dictionary
+park_keys = park_codes.keys()
+
+for key in park_keys:
+    print(key)
+
+# Get park_code values from dictionary
+park_values = park_codes.values()
+
+for value in park_values:
+    print(value)
