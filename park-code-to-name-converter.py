@@ -4,7 +4,7 @@ Park Code to Name converter
 
 # Dictionary for park codes
 park_codes = {
-    "AH": "Allhallows",             #changed name
+    "AH": "Kent Coast",
     "BD": "Blue Dolphin",
     "BE": "Berwick",
     "BR": "Burnham On Sea",
@@ -27,20 +27,19 @@ park_codes = {
     "LY": "Lydstep Beach",
     "MM": "Marton Mere",
     "OR": "The Orchards",
-    "P*": "***",                    #removed until confirmed ok
+    "PC": "Penally Court",
     "PH": "Presthaven",
     "PS": "Perran Sands",
     "PV": "Primrose Valley",
     "QW": "Quay West",
     "RE": "Reighton Sands",
-    "R*": "***",                    #removed until confirmed ok
     "RP": "Rockley Park",
     "RV": "Riviere Sands",
     "SA": "Seashore",
     "SE": "Seton Sands",
     "SN": "Skegness Holiday Park",
     "SV": "Seaview",
-    "TP": "Thorpe Park",            #changed name  
+    "TP": "Cleepthorpes Beach",
     "TW": "Thornwick",
     "WD": "Wild Duck",
     "WM": "Weymouth Bay"
