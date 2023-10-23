@@ -1,5 +1,5 @@
 import unittest
-from park_info import get_park_code, handle_user_input
+from park_info import get_park_code
 
 class TestParkInfo(unittest.TestCase):
     
@@ -33,15 +33,5 @@ class TestParkInfo(unittest.TestCase):
         # Assert
         self.assertEqual(result, "Kent Coast")
     
-    # Add more test cases using AAA pattern as needed
-
-    ''' OLD TEST
-    def test_exit_command(self):     
-        # Arrange & Act
-        result = handle_user_input()
-        
-        # Assert
-        self.assertEqual(result, "\n*****\nExiting program. Goodbye!\n*****\n")
-    '''
 if __name__ == "__main__":
     unittest.main()
