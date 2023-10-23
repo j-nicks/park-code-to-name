@@ -54,22 +54,26 @@ def get_park_code(code):
     else:
         return "\nIncorrect entry. Please try again."
 
+# Function to handle user input
+def handle_user_input():
+    while True:
+        park_info = input("*****\nType park code, or get a list by typing 'codes' or 'names'.\nType 'exit' to quit program.\n*****\n\n")
+
+        if park_info.lower() == "exit":
+            print("\n*****\nExiting program. Goodbye!\n*****\n")
+            break
+        elif park_info.lower() == "codes":
+            print("\nHere are all Park Codes:\n")
+            for code in park_dict.keys():
+                print(code)
+        elif park_info.lower() == "names":
+            print("\nHere are all Park Names:\n")
+            for name in park_dict.values():
+                print(name)
+        else:
+            result = get_park_code(park_info)
+            print(f"\nThe park for {park_info} is: {result}\n")
+           
 # Program start
-while True:
-    park_info = input("*****\nType park code, or get a list by typing 'codes' or 'names'.\nType 'exit' to quit program.\n*****\n\n")
-
-    if park_info.lower() == "exit":
-        print("\n*****\nExiting program. Goodbye!\n*****\n")
-        break
-
-    if park_info == "codes":
-        print("\nHere are all Park Codes:\n")
-        for code in park_dict.keys():
-            print(code)
-    elif park_info == "names":
-        print("\nHere are all Park Names:\n")
-        for name in park_dict.values():
-            print(name)
-    else:
-        result = get_park_code(park_info)
-        print(f"\nThe park for {park_info} is: {result}\n")
+if __name__ == "__main__":
+    handle_user_input()
