@@ -78,4 +78,4 @@ while True:
         print(list_names())
     else:
         result = search_code(request_park_info)
-        print(f"\nThe park for {request_park_info} is:\n{result}\n")
+        print(f"\nThe park for {request_park_info} is: {result}\n")
