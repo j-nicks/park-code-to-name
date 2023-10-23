@@ -3,7 +3,7 @@ Park Code to Name converter
 '''
 
 # Dictionary for park codes
-park_codes = {
+park_dict = {
     "AH": "Kent Coast",
     "BD": "Blue Dolphin",
     "BE": "Berwick",
@@ -46,30 +46,33 @@ park_codes = {
 }
 
 # Variables
-park_keys = park_codes.keys()       # Keys (Park Codes)
-park_values = park_codes.values()   # Values (Park Names)
+park_codes = park_dict.keys()       # Keys (Park Codes)
+park_names = park_dict.values()     # Values (Park Names)
 
 
 # Functions
-def list_keys():
-    for key in park_keys:
-        print(key)
+def list_codes():
+    for code in park_codes:
+        print(code)
 
-def list_values():
-    for value in park_values:
-        print(value)
+def list_names():
+    for name in park_names:
+        print(name)
+        
+def search_code(code):
+    return park_dict.get(code, "Park code not found.")
 
-'''
-def search_keys(key):
-    key = park_codes.get(key)
-    return key
-'''
     
 codes_or_names = input("Would you like a list of Park 'codes' or 'names'?\n")
 
 if codes_or_names == "codes":
-    print(list_keys())
+    print(list_codes())
 elif codes_or_names == "names":
-    print(list_values())
+    print(list_names())
 else:
     print("Incorrect entry, please type 'codes' or 'names'.")
+    
+
+enter_code = input("Type code:\n")
+result = search_code(enter_code)
+print(result)
