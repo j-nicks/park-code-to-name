@@ -51,27 +51,31 @@ park_names = park_dict.values()     # Values (Park Names)
 
 # Functions
 def list_codes():
-    print("Here are the Park Codes:\n")
+    print("\nHere are all Park Codes:\n")
     for code in park_codes:
         print(code)
 
 def list_names():
-    print("Here are the Park Names:\n")
+    print("\nHere are all Park Names:\n")
     for name in park_names:
         print(name)
         
 def search_code(code):
-    return park_dict.get(code, "Incorrect entry, please enter park code, or type 'codes' or 'names' for a list.")
+    code = code.upper() # Convert code to uppercase
+    return park_dict.get(code, "\nIncorrect entry. Please try again.")
 
-# Program start    
-request_park_info = input("Type park code, or get a list by typing 'codes' or 'names'.\n")
+# Program start
+while True:
+    request_park_info = input("*****\nType park code, or get a list by typing 'codes' or 'names'.\nType 'exit' to quit program.\n*****\n\n")
 
-if request_park_info == "codes":
-    print(list_codes())
-elif request_park_info == "names":
-    print(list_names())
-else:
-    result = search_code(request_park_info)
-    print(f"The park for {request_park_info} is:\n{result}\n")
-#else:
-#    print("Incorrect entry, please enter park code, or type 'codes' or 'names' for a list.")
+    if request_park_info.lower() == "exit":
+        print("\n*****\nExiting program. Goodbye!\n*****\n")
+        break
+
+    if request_park_info == "codes":
+        print(list_codes())
+    elif request_park_info == "names":
+        print(list_names())
+    else:
+        result = search_code(request_park_info)
+        print(f"\nThe park for {request_park_info} is:\n{result}\n")
