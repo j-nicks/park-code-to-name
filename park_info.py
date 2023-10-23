@@ -72,7 +72,7 @@ def handle_user_input():
                 print(name)
         else:
             result = get_park_code(park_info)
-            print(f"\nThe park for {park_info} is: {result}\n")
+            print(f"\nThe park for {park_info.upper()} is: {result}\n")
            
 # Program start
 if __name__ == "__main__":
