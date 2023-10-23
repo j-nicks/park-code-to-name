@@ -1,5 +1,5 @@
 '''
-Park Code to Name converter 
+Park Info (Code / Name converter)
 '''
 
 # Dictionary for park codes
@@ -49,7 +49,6 @@ park_dict = {
 park_codes = park_dict.keys()       # Keys (Park Codes)
 park_names = park_dict.values()     # Values (Park Names)
 
-
 # Functions
 def list_codes():
     for code in park_codes:
@@ -62,17 +61,15 @@ def list_names():
 def search_code(code):
     return park_dict.get(code, "Park code not found.")
 
-    
-codes_or_names = input("Would you like a list of Park 'codes' or 'names'?\n")
+# Program start    
+request_park_info = input("Type park code, or get a list with 'codes' or 'names'\n")
 
-if codes_or_names == "codes":
-    print(list_codes())
-elif codes_or_names == "names":
-    print(list_names())
+if request_park_info == "codes":
+    print(f"{list_codes()}\n")
+elif request_park_info == "names":
+    print(f"{list_names()}\n")
+elif request_park_info:
+    result = search_code(request_park_info)
+    print(result)
 else:
     print("Incorrect entry, please type 'codes' or 'names'.")
-    
-
-enter_code = input("Type code:\n")
-result = search_code(enter_code)
-print(result)
