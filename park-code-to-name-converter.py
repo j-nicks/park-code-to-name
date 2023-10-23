@@ -51,25 +51,27 @@ park_names = park_dict.values()     # Values (Park Names)
 
 # Functions
 def list_codes():
+    print("Here are the Park Codes:\n")
     for code in park_codes:
         print(code)
 
 def list_names():
+    print("Here are the Park Names:\n")
     for name in park_names:
         print(name)
         
 def search_code(code):
-    return park_dict.get(code, "Park code not found.")
+    return park_dict.get(code, "Incorrect entry, please enter park code, or type 'codes' or 'names' for a list.")
 
 # Program start    
-request_park_info = input("Type park code, or get a list with 'codes' or 'names'\n")
+request_park_info = input("Type park code, or get a list by typing 'codes' or 'names'.\n")
 
 if request_park_info == "codes":
-    print(f"{list_codes()}\n")
+    print(list_codes())
 elif request_park_info == "names":
-    print(f"{list_names()}\n")
-elif request_park_info:
-    result = search_code(request_park_info)
-    print(result)
+    print(list_names())
 else:
-    print("Incorrect entry, please type 'codes' or 'names'.")
+    result = search_code(request_park_info)
+    print(f"The park for {request_park_info} is:\n{result}\n")
+#else:
+#    print("Incorrect entry, please enter park code, or type 'codes' or 'names' for a list.")
