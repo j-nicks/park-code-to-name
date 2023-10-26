@@ -2,6 +2,8 @@
 Park Info (Code / Name converter)
 '''
 
+#import sys
+
 # Dictionary for park codes
 park_dict = {
     "AH": "Kent Coast",
@@ -47,7 +49,7 @@ park_dict = {
 
 # Function to get park code from user
 def get_park_code(code):
-    code = code.upper()  # Convert request to uppercase
+    code = code.upper()  # Convert code to uppercase
     
     if code in park_dict:
         return park_dict[code]
@@ -55,6 +57,7 @@ def get_park_code(code):
         return "\nIncorrect entry. Please try again."
 
 # Function to handle user input
+'''
 def handle_user_input():
     while True:
         park_info = input("*****\nType park code, or get a list by typing 'codes' or 'names'.\nType 'exit' to quit program.\n*****\n\n")
@@ -73,7 +76,19 @@ def handle_user_input():
         else:
             result = get_park_code(park_info)
             print(f"\nThe park for {park_info.upper()} is: {result}\n")
-           
+'''
+def handle_user_input():
+    park_info = "AH"    
+    get_park_code(park_info)    
+    
 # Program start
 if __name__ == "__main__":
+    '''
+    if len(sys.argv) != 2:
+        print("Usage: python park_info.py <park code>")
+    else:
+        park_code = sys.argv[1]
+        result = get_park_code(park_code)
+        print(f"The park for {park_code.upper()} is {result}")
+    '''
     handle_user_input()

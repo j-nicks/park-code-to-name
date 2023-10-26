@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\.github",
+    "\\.github\\workflows"
   ],
   "SelectedNode": "\\park_info.py",
   "PreviewInSolutionExplorer": false
